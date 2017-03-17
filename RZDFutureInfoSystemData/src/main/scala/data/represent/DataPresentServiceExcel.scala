@@ -44,6 +44,18 @@ object DataPresentServiceExcel {
 
     def main(args: Array[String]): Unit = {
 
+        /*      val str1 = ratingStatusesByMonths.map(e =>
+            "{\"month\":" + e.month + "," +
+               "\"year\": " + 2016 + "," +
+               "\"hardNegative\":" + e.totalHardNegative + "," +
+                "\"softNegative\":" + e.totalSoftNegative + "," +
+                "\"neutral\":" + e.totalNeutral + "," +
+                "\"positive\":" + e.totalPositive + "}").mkString("[",",","]")
+
+        val i1 = resolvingStatusesByMonths.map(_.totalInProgress).sum
+        val i2 = resolvingStatusesByMonths.map(_.totalResolved).sum
+        val i3 = resolvingStatusesByMonths.map(_.totalUnresolved).sum*/
+      
         val dataPresentServiceExcel = new DataPresentServiceExcel(DataProcessor.PathName + DataProcessor.FileNameToSave)
 
         val ratingStatusesByMonths = dataPresentServiceExcel.accumulateRatingStatusesByMonths(
