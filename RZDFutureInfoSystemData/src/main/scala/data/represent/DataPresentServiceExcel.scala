@@ -26,18 +26,19 @@ case class CategoryByNumberOfCallsAndResolvingStatuses(
                                                       )
 
 case class SourceByNumberOfCallsAndResolvingStatuses(
-                                                          source: String,
-                                                          numberOfCalls: Int,
-                                                          totalResolved: Int,
-                                                          totalUnresolved: Int,
-                                                          totalInProgress: Int
-                                                      )
+                                                        source: String,
+                                                        numberOfCalls: Int,
+                                                        totalResolved: Int,
+                                                        totalUnresolved: Int,
+                                                        totalInProgress: Int
+                                                    )
 
 object DataPresentServiceExcel {
 
     val ColNameDateInput = "date"
     val ColNameCategoryInput = "category"
     val ColNameSourceInput = "source"
+    val ColNameAffiliateInput = "affiliate"
     val ColNameRatingStatus = "ratingStatus"
     val ColNameResolvingStatus = "resolvingStatus"
 
@@ -45,10 +46,18 @@ object DataPresentServiceExcel {
 
         val dataPresentServiceExcel = new DataPresentServiceExcel(DataProcessor.PathName + DataProcessor.FileNameToSave)
 
-        val ratingStatusesByMonths = dataPresentServiceExcel.accumulateRatingStatusesByMonths()
-        val resolvingStatusesByMonths = dataPresentServiceExcel.accumulateResolvingStatusesByMonths()
-        val categoriesByNumberOfCallsAndResolvingStatuses = dataPresentServiceExcel.representCategoriesByNumberOfCallsAndResolvingStatuses()
-        val sourcesByNumberOfCallsAndResolvingStatuses = dataPresentServiceExcel.representSourcesByNumberOfCallsAndResolvingStatuses()
+        val ratingStatusesByMonths = dataPresentServiceExcel.accumulateRatingStatusesByMonths(
+            Option("Ю-ВОСТ")
+        )
+        val resolvingStatusesByMonths = dataPresentServiceExcel.accumulateResolvingStatusesByMonths(
+            Option("З-СИБ")
+        )
+        val categoriesByNumberOfCallsAndResolvingStatuses = dataPresentServiceExcel.representCategoriesByNumberOfCallsAndResolvingStatuses(
+            Option("В-СИБ")
+        )
+        val sourcesByNumberOfCallsAndResolvingStatuses = dataPresentServiceExcel.representSourcesByNumberOfCallsAndResolvingStatuses(
+            Option("ОКТ")
+        )
         println()
     }
 }
@@ -82,18 +91,34 @@ class DataPresentServiceExcel(excelFullFileName: String) {
             rowCount = processor.getCountOfNonEmptyRows.getOrElse(statuses.size)
         )
 
-        assert(dates.length == statuses.length,
-            "Error to accumulate rating statuses by months: different date and statuses lengths!"
-        )
+        val datesStatusesByMonth = (if (affiliate.isDefined) {
+            val affiliates = processor.readDataFromSheet(
+                sheetName = DataProcessor.SavedExcelMainSheetName,
+                colName = DataPresentServiceExcel.ColNameAffiliateInput,
+                numberValuesAsFlt = true,
+                rowId = processor.getIndexOfStartRow.getOrElse(DataExtractor.StartRowIdInput),
+                findNextRow = true,
+                maxCellsNumber = DataExtractor.MaxCellsNumberToSeekInput,
+                parseAlwaysAsString = true,
+                rowCount = processor.getCountOfNonEmptyRows.getOrElse(statuses.size)
+            )
 
-        val datesStatusesByMonth = (dates zip statuses).
-            filter(x => x._1.length >= 7).
+            (dates zip statuses zip affiliates).
+                filter(x => x._2 == affiliate.get)
+                .map(x => x._1)
+        } else {
+            dates zip statuses
+        }).filter(x => x._1.length >= 7).
             map { x =>
                 x._1.substring(3, 5).toInt -> x._2
             }.
             groupBy(x => x._1).
             map(x => x._1 -> x._2.unzip._2).
             map(x => x._1 -> x._2.groupBy(xx => xx).map(xx => xx._1 -> xx._2.length))
+
+        assert(dates.length == statuses.length,
+            "Error to accumulate rating statuses by months: different date and statuses lengths!"
+        )
 
         val res = new Array[RatingStatusesByMonths](datesStatusesByMonth.size)
         var i = 0
@@ -152,8 +177,24 @@ class DataPresentServiceExcel(excelFullFileName: String) {
             "Error to accumulate resolving statuses by months: different date and statuses lengths!"
         )
 
-        val datesStatusesByMonth = (dates zip statuses).
-            filter(x => x._1.length >= 7).
+        val datesStatusesByMonth = (if (affiliate.isDefined) {
+            val affiliates = processor.readDataFromSheet(
+                sheetName = DataProcessor.SavedExcelMainSheetName,
+                colName = DataPresentServiceExcel.ColNameAffiliateInput,
+                numberValuesAsFlt = true,
+                rowId = processor.getIndexOfStartRow.getOrElse(DataExtractor.StartRowIdInput),
+                findNextRow = true,
+                maxCellsNumber = DataExtractor.MaxCellsNumberToSeekInput,
+                parseAlwaysAsString = true,
+                rowCount = processor.getCountOfNonEmptyRows.getOrElse(statuses.size)
+            )
+
+            (dates zip statuses zip affiliates).
+                filter(x => x._2 == affiliate.get)
+                .map(x => x._1)
+        } else {
+            dates zip statuses
+        }).filter(x => x._1.length >= 7).
             map { x =>
                 x._1.substring(3, 5).toInt -> x._2
             }.
@@ -214,8 +255,24 @@ class DataPresentServiceExcel(excelFullFileName: String) {
             "Error to represent categories by number of calls and resolving statuses: different categories and statuses lengths!"
         )
 
-        val categoriesWithStatuses = (categories zip statuses).
-            filter(x => x._1 != "").
+        val categoriesWithStatuses = (if (affiliate.isDefined) {
+            val affiliates = processor.readDataFromSheet(
+                sheetName = DataProcessor.SavedExcelMainSheetName,
+                colName = DataPresentServiceExcel.ColNameAffiliateInput,
+                numberValuesAsFlt = true,
+                rowId = processor.getIndexOfStartRow.getOrElse(DataExtractor.StartRowIdInput),
+                findNextRow = true,
+                maxCellsNumber = DataExtractor.MaxCellsNumberToSeekInput,
+                parseAlwaysAsString = true,
+                rowCount = processor.getCountOfNonEmptyRows.getOrElse(statuses.size)
+            )
+
+            (categories zip statuses zip affiliates).
+                filter(x => x._2 == affiliate.get)
+                .map(x => x._1)
+        } else {
+            categories zip statuses
+        }).filter(x => x._1 != "").
             groupBy(x => x._1).
             map(x => x._1 -> x._2.unzip._2).
             map(x => x._1 -> x._2.groupBy(xx => xx).map(xx => xx._1 -> xx._2.length))
@@ -246,8 +303,8 @@ class DataPresentServiceExcel(excelFullFileName: String) {
     }
 
     def representSourcesByNumberOfCallsAndResolvingStatuses(
-                                                                  affiliate: Option[String] = None
-                                                              ): Seq[CategoryByNumberOfCallsAndResolvingStatuses] = {
+                                                               affiliate: Option[String] = None
+                                                           ): Seq[CategoryByNumberOfCallsAndResolvingStatuses] = {
 
         val statuses = processor.readDataFromSheet(
             sheetName = DataProcessor.SavedExcelMainSheetName,
@@ -274,8 +331,24 @@ class DataPresentServiceExcel(excelFullFileName: String) {
             "Error to represent sources by number of calls and resolving statuses: different sources and statuses lengths!"
         )
 
-        val sourcesWithStatuses = (sources zip statuses).
-            filter(x => x._1 != "").
+        val sourcesWithStatuses = (if (affiliate.isDefined) {
+            val affiliates = processor.readDataFromSheet(
+                sheetName = DataProcessor.SavedExcelMainSheetName,
+                colName = DataPresentServiceExcel.ColNameAffiliateInput,
+                numberValuesAsFlt = true,
+                rowId = processor.getIndexOfStartRow.getOrElse(DataExtractor.StartRowIdInput),
+                findNextRow = true,
+                maxCellsNumber = DataExtractor.MaxCellsNumberToSeekInput,
+                parseAlwaysAsString = true,
+                rowCount = processor.getCountOfNonEmptyRows.getOrElse(statuses.size)
+            )
+
+            (sources zip statuses zip affiliates).
+                filter(x => x._2 == affiliate.get)
+                .map(x => x._1)
+        } else {
+            sources zip statuses
+        }).filter(x => x._1 != "").
             groupBy(x => x._1).
             map(x => x._1 -> x._2.unzip._2).
             map(x => x._1 -> x._2.groupBy(xx => xx).map(xx => xx._1 -> xx._2.length))
@@ -305,10 +378,10 @@ class DataPresentServiceExcel(excelFullFileName: String) {
         res
     }
 
-    def findTopEarlyCalls(
-                    numberOfCalls: Int
-                    ) : Seq[FullInfo] {
-
-    }
+    //    def findTopEarlyCalls(
+    //                    numberOfCalls: Int
+    //                    ) : Seq[FullInfo] {
+    //
+    //    }
 
 }
