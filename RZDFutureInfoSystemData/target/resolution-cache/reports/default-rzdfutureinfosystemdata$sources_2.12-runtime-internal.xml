@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="default"
+		module="rzdfutureinfosystemdata$sources_2.12"
+		revision="1.0"
+		conf="runtime-internal"
+		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
+		date="20170317134207"/>
+	<dependencies>
+		<module organisation="org.mongodb" name="casbah-gridfs_2.10">
+			<revision name="3.1.1" status="release" pubdate="20160301193500" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/mongodb/casbah" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="14">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="2841" time="0" location="C:\Users\DByikov\.ivy2\cache\org.mongodb\casbah-gridfs_2.10\ivy-3.1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/mongodb/casbah-gridfs_2.10/3.1.1/casbah-gridfs_2.10-3.1.1.pom"/>
+				<caller organisation="default" name="rzdfutureinfosystemdata$sources_2.12" conf="compile, runtime-internal, runtime, optional" rev="3.1.1" rev-constraint-default="3.1.1" rev-constraint-dynamic="3.1.1" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="casbah-gridfs_2.10" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="7543" time="0" location="C:\Users\DByikov\.ivy2\cache\org.mongodb\casbah-gridfs_2.10\srcs\casbah-gridfs_2.10-3.1.1-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/mongodb/casbah-gridfs_2.10/3.1.1/casbah-gridfs_2.10-3.1.1-sources.jar"/>
+					</artifact>
+					<artifact name="casbah-gridfs_2.10" type="jar" ext="jar" status="no" details="" size="79258" time="0" location="C:\Users\DByikov\.ivy2\cache\org.mongodb\casbah-gridfs_2.10\jars\casbah-gridfs_2.10-3.1.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/mongodb/casbah-gridfs_2.10/3.1.1/casbah-gridfs_2.10-3.1.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.mongodb" name="casbah-core_2.10">
+			<revision name="3.1.1" status="release" pubdate="20160301193457" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/mongodb/casbah" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="12">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="2859" time="0" location="C:\Users\DByikov\.ivy2\cache\org.mongodb\casbah-core_2.10\ivy-3.1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/mongodb/casbah-core_2.10/3.1.1/casbah-core_2.10-3.1.1.pom"/>
+				<caller organisation="default" name="rzdfutureinfosystemdata$sources_2.12" conf="compile, runtime-internal, runtime, optional" rev="3.1.1" rev-constraint-default="3.1.1" rev-constraint-dynamic="3.1.1" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="casbah-core_2.10" type="jar" ext="jar" status="no" details="" size="284316" time="0" location="C:\Users\DByikov\.ivy2\cache\org.mongodb\casbah-core_2.10\jars\casbah-core_2.10-3.1.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/mongodb/casbah-core_2.10/3.1.1/casbah-core_2.10-3.1.1.jar"/>
+					</artifact>
+					<artifact name="casbah-core_2.10" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="47689" time="0" location="C:\Users\DByikov\.ivy2\cache\org.mongodb\casbah-core_2.10\srcs\casbah-core_2.10-3.1.1-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/mongodb/casbah-core_2.10/3.1.1/casbah-core_2.10-3.1.1-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.mongodb" name="casbah-query_2.10">
+			<revision name="3.1.1" status="release" pubdate="20160301193446" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/mongodb/casbah" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="13">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="2714" time="0" location="C:\Users\DByikov\.ivy2\cache\org.mongodb\casbah-query_2.10\ivy-3.1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/mongodb/casbah-query_2.10/3.1.1/casbah-query_2.10-3.1.1.pom"/>
+				<caller organisation="default" name="rzdfutureinfosystemdata$sources_2.12" conf="compile, runtime-internal, runtime, optional" rev="3.1.1" rev-constraint-default="3.1.1" rev-constraint-dynamic="3.1.1" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="casbah-query_2.10" type="jar" ext="jar" status="no" details="" size="230684" time="0" location="C:\Users\DByikov\.ivy2\cache\org.mongodb\casbah-query_2.10\jars\casbah-query_2.10-3.1.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/mongodb/casbah-query_2.10/3.1.1/casbah-query_2.10-3.1.1.jar"/>
+					</artifact>
+					<artifact name="casbah-query_2.10" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="11467" time="0" location="C:\Users\DByikov\.ivy2\cache\org.mongodb\casbah-query_2.10\srcs\casbah-query_2.10-3.1.1-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/mongodb/casbah-query_2.10/3.1.1/casbah-query_2.10-3.1.1-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.mongodb" name="casbah-commons_2.10">
+			<revision name="3.1.1" status="release" pubdate="20160301193508" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/mongodb/casbah" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="6">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="3626" time="0" location="C:\Users\DByikov\.ivy2\cache\org.mongodb\casbah-commons_2.10\ivy-3.1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/mongodb/casbah-commons_2.10/3.1.1/casbah-commons_2.10-3.1.1.pom"/>
+				<caller organisation="default" name="rzdfutureinfosystemdata$sources_2.12" conf="compile, runtime-internal, runtime, optional" rev="3.1.1" rev-constraint-default="3.1.1" rev-constraint-dynamic="3.1.1" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="casbah-commons_2.10" type="jar" ext="jar" status="no" details="" size="173858" time="0" location="C:\Users\DByikov\.ivy2\cache\org.mongodb\casbah-commons_2.10\jars\casbah-commons_2.10-3.1.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/mongodb/casbah-commons_2.10/3.1.1/casbah-commons_2.10-3.1.1.jar"/>
+					</artifact>
+					<artifact name="casbah-commons_2.10" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="13555" time="0" location="C:\Users\DByikov\.ivy2\cache\org.mongodb\casbah-commons_2.10\srcs\casbah-commons_2.10-3.1.1-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/mongodb/casbah-commons_2.10/3.1.1/casbah-commons_2.10-3.1.1-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.slf4j" name="slf4j-api">
+			<revision name="1.6.0" status="release" pubdate="20100508164529" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="11">
+				<metadata-artifact status="no" details="" size="4113" time="0" location="C:\Users\DByikov\.ivy2\cache\org.slf4j\slf4j-api\ivy-1.6.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.6.0/slf4j-api-1.6.0.pom"/>
+				<caller organisation="default" name="rzdfutureinfosystemdata$sources_2.12" conf="compile, runtime-internal, runtime, optional" rev="1.6.0" rev-constraint-default="1.6.0" rev-constraint-dynamic="1.6.0" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="slf4j-api" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="45038" time="0" location="C:\Users\DByikov\.ivy2\cache\org.slf4j\slf4j-api\srcs\slf4j-api-1.6.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.6.0/slf4j-api-1.6.0-sources.jar"/>
+					</artifact>
+					<artifact name="slf4j-api" type="jar" ext="jar" status="no" details="" size="25496" time="0" location="C:\Users\DByikov\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.6.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.6.0/slf4j-api-1.6.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.mongodb" name="mongo-java-driver">
+			<revision name="3.2.2" status="release" pubdate="20160215212032" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.mongodb.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="10">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3027" time="0" location="C:\Users\DByikov\.ivy2\cache\org.mongodb\mongo-java-driver\ivy-3.2.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/mongodb/mongo-java-driver/3.2.2/mongo-java-driver-3.2.2.pom"/>
+				<caller organisation="default" name="rzdfutureinfosystemdata$sources_2.12" conf="compile, runtime-internal, runtime, optional" rev="3.2.2" rev-constraint-default="3.2.2" rev-constraint-dynamic="3.2.2" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="mongo-java-driver" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1046583" time="0" location="C:\Users\DByikov\.ivy2\cache\org.mongodb\mongo-java-driver\srcs\mongo-java-driver-3.2.2-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/mongodb/mongo-java-driver/3.2.2/mongo-java-driver-3.2.2-sources.jar"/>
+					</artifact>
+					<artifact name="mongo-java-driver" type="jar" ext="jar" status="no" details="" size="1484724" time="0" location="C:\Users\DByikov\.ivy2\cache\org.mongodb\mongo-java-driver\jars\mongo-java-driver-3.2.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/mongodb/mongo-java-driver/3.2.2/mongo-java-driver-3.2.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.github.nscala-time" name="nscala-time_2.10">
+			<revision name="1.0.0" status="release" pubdate="20140418052452" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/nscala-time/nscala-time" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="7">
+				<license name="Apache" url="http://www.opensource.org/licenses/Apache-2.0"/>
+				<metadata-artifact status="no" details="" size="3082" time="0" location="C:\Users\DByikov\.ivy2\cache\com.github.nscala-time\nscala-time_2.10\ivy-1.0.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/github/nscala-time/nscala-time_2.10/1.0.0/nscala-time_2.10-1.0.0.pom"/>
+				<caller organisation="default" name="rzdfutureinfosystemdata$sources_2.12" conf="compile, runtime-internal, runtime, optional" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="nscala-time_2.10" type="jar" ext="jar" status="no" details="" size="187119" time="0" location="C:\Users\DByikov\.ivy2\cache\com.github.nscala-time\nscala-time_2.10\jars\nscala-time_2.10-1.0.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/github/nscala-time/nscala-time_2.10/1.0.0/nscala-time_2.10-1.0.0.jar"/>
+					</artifact>
+					<artifact name="nscala-time_2.10" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="39521" time="0" location="C:\Users\DByikov\.ivy2\cache\com.github.nscala-time\nscala-time_2.10\srcs\nscala-time_2.10-1.0.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/github/nscala-time/nscala-time_2.10/1.0.0/nscala-time_2.10-1.0.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="joda-time" name="joda-time">
+			<revision name="2.3" status="release" pubdate="20130816233125" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.joda.org/joda-time/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="8">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="6572" time="0" location="C:\Users\DByikov\.ivy2\cache\joda-time\joda-time\ivy-2.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/joda-time/joda-time/2.3/joda-time-2.3.pom"/>
+				<caller organisation="default" name="rzdfutureinfosystemdata$sources_2.12" conf="compile, runtime-internal, runtime, optional" rev="2.3" rev-constraint-default="2.3" rev-constraint-dynamic="2.3" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="joda-time" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="718287" time="0" location="C:\Users\DByikov\.ivy2\cache\joda-time\joda-time\srcs\joda-time-2.3-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/joda-time/joda-time/2.3/joda-time-2.3-sources.jar"/>
+					</artifact>
+					<artifact name="joda-time" type="jar" ext="jar" status="no" details="" size="581571" time="0" location="C:\Users\DByikov\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/joda-time/joda-time/2.3/joda-time-2.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.joda" name="joda-convert">
+			<revision name="1.2" status="release" pubdate="20111028015117" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://joda-convert.sourceforge.net" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="9">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3281" time="0" location="C:\Users\DByikov\.ivy2\cache\org.joda\joda-convert\ivy-1.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/joda/joda-convert/1.2/joda-convert-1.2.pom"/>
+				<caller organisation="default" name="rzdfutureinfosystemdata$sources_2.12" conf="compile, runtime-internal, runtime, optional" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="joda-convert" type="jar" ext="jar" status="no" details="" size="38460" time="0" location="C:\Users\DByikov\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/joda/joda-convert/1.2/joda-convert-1.2.jar"/>
+					</artifact>
+					<artifact name="joda-convert" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="19105" time="0" location="C:\Users\DByikov\.ivy2\cache\org.joda\joda-convert\srcs\joda-convert-1.2-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/joda/joda-convert/1.2/joda-convert-1.2-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.poi" name="poi-ooxml">
+			<revision name="3.10.1" status="release" pubdate="20140818115422" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://poi.apache.org/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="3">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2887" time="0" location="C:\Users\DByikov\.ivy2\cache\org.apache.poi\poi-ooxml\ivy-3.10.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/poi/poi-ooxml/3.10.1/poi-ooxml-3.10.1.pom"/>
+				<caller organisation="default" name="rzdfutureinfosystemdata$sources_2.12" conf="compile, runtime-internal, runtime, optional" rev="3.10.1" rev-constraint-default="3.10.1" rev-constraint-dynamic="3.10.1" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="poi-ooxml" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="752108" time="0" location="C:\Users\DByikov\.ivy2\cache\org.apache.poi\poi-ooxml\srcs\poi-ooxml-3.10.1-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/poi/poi-ooxml/3.10.1/poi-ooxml-3.10.1-sources.jar"/>
+					</artifact>
+					<artifact name="poi-ooxml" type="jar" ext="jar" status="no" details="" size="1035419" time="0" location="C:\Users\DByikov\.ivy2\cache\org.apache.poi\poi-ooxml\jars\poi-ooxml-3.10.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/poi/poi-ooxml/3.10.1/poi-ooxml-3.10.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="dom4j" name="dom4j">
+			<revision name="1.6.1" status="release" pubdate="20060210173318" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://dom4j.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="4">
+				<metadata-artifact status="no" details="" size="3768" time="0" location="C:\Users\DByikov\.ivy2\cache\dom4j\dom4j\ivy-1.6.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/dom4j/dom4j/1.6.1/dom4j-1.6.1.pom"/>
+				<caller organisation="default" name="rzdfutureinfosystemdata$sources_2.12" conf="compile, runtime-internal, runtime, optional" rev="1.6.1" rev-constraint-default="1.6.1" rev-constraint-dynamic="1.6.1" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="dom4j" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="432186" time="0" location="C:\Users\DByikov\.ivy2\cache\dom4j\dom4j\srcs\dom4j-1.6.1-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/dom4j/dom4j/1.6.1/dom4j-1.6.1-sources.jar"/>
+					</artifact>
+					<artifact name="dom4j" type="jar" ext="jar" status="no" details="" size="313898" time="0" location="C:\Users\DByikov\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="xml-apis" name="xml-apis">
+			<revision name="1.0.b2" status="release" pubdate="20070209053046" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://xml.apache.org/commons/#external" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="5">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2952" time="0" location="C:\Users\DByikov\.ivy2\cache\xml-apis\xml-apis\ivy-1.0.b2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.pom"/>
+				<caller organisation="default" name="rzdfutureinfosystemdata$sources_2.12" conf="compile, runtime-internal, runtime, optional" rev="1.0.b2" rev-constraint-default="1.0.b2" rev-constraint-dynamic="1.0.b2" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="xml-apis" type="jar" ext="jar" status="no" details="" size="109318" time="0" location="C:\Users\DByikov\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.0.b2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar"/>
+					</artifact>
+					<artifact name="xml-apis" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="407051" time="0" location="C:\Users\DByikov\.ivy2\cache\xml-apis\xml-apis\srcs\xml-apis-1.0.b2-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.poi" name="poi">
+			<revision name="3.10.1" status="release" pubdate="20140818115025" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://poi.apache.org/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="1">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2864" time="0" location="C:\Users\DByikov\.ivy2\cache\org.apache.poi\poi\ivy-3.10.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/poi/poi/3.10.1/poi-3.10.1.pom"/>
+				<caller organisation="default" name="rzdfutureinfosystemdata$sources_2.12" conf="compile, runtime-internal, runtime, optional" rev="3.10.1" rev-constraint-default="3.10.1" rev-constraint-dynamic="3.10.1" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="poi" type="jar" ext="jar" status="no" details="" size="1949542" time="0" location="C:\Users\DByikov\.ivy2\cache\org.apache.poi\poi\jars\poi-3.10.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/poi/poi/3.10.1/poi-3.10.1.jar"/>
+					</artifact>
+					<artifact name="poi" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1861205" time="0" location="C:\Users\DByikov\.ivy2\cache\org.apache.poi\poi\srcs\poi-3.10.1-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/poi/poi/3.10.1/poi-3.10.1-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="commons-codec" name="commons-codec">
+			<revision name="1.5" status="release" pubdate="20110325063406" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/codec/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="2">
+				<metadata-artifact status="no" details="" size="6492" time="0" location="C:\Users\DByikov\.ivy2\cache\commons-codec\commons-codec\ivy-1.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-codec/commons-codec/1.5/commons-codec-1.5.pom"/>
+				<caller organisation="default" name="rzdfutureinfosystemdata$sources_2.12" conf="compile, runtime-internal, runtime, optional" rev="1.5" rev-constraint-default="1.5" rev-constraint-dynamic="1.5" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="commons-codec" type="jar" ext="jar" status="no" details="" size="73098" time="0" location="C:\Users\DByikov\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.5.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/commons-codec/commons-codec/1.5/commons-codec-1.5.jar"/>
+					</artifact>
+					<artifact name="commons-codec" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="102254" time="0" location="C:\Users\DByikov\.ivy2\cache\commons-codec\commons-codec\srcs\commons-codec-1.5-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/commons-codec/commons-codec/1.5/commons-codec-1.5-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-library">
+			<revision name="2.12.1" status="release" pubdate="20161205160923" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.1/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="0">
+				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
+				<metadata-artifact status="no" details="" size="2685" time="0" location="C:\Users\DByikov\.ivy2\cache\org.scala-lang\scala-library\ivy-2.12.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.1/scala-library-2.12.1.pom"/>
+				<caller organisation="default" name="rzdfutureinfosystemdata$sources_2.12" conf="compile, runtime-internal, runtime, optional" rev="2.12.1" rev-constraint-default="2.12.1" rev-constraint-dynamic="2.12.1" callerrev="1.0" extra-info.apiURL="http://www.scala-lang.org/api/2.12.1/"/>
+				<artifacts>
+					<artifact name="scala-library" type="jar" ext="jar" status="no" details="" size="5272325" time="0" location="C:\Users\DByikov\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.12.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.1/scala-library-2.12.1.jar"/>
+					</artifact>
+					<artifact name="scala-library" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="988614" time="0" location="C:\Users\DByikov\.ivy2\cache\org.scala-lang\scala-library\srcs\scala-library-2.12.1-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.1/scala-library-2.12.1-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>
